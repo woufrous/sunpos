@@ -18,8 +18,8 @@ type Location struct {
 }
 
 type SunCoordinates struct {
-	Azimuth     float64
-	ZenithAngle float64
+	Azimuth     float64 `json:"az"`
+	ZenithAngle float64 `json:"sza"`
 }
 
 func Sunpos(udtTime time.Time, udtLocation Location) *SunCoordinates {
